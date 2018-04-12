@@ -9,13 +9,13 @@
 ################################################
 
 ##remember to run ./setup script before running testings
-CLANGFLAG='-g -c -emit-llvm -I.'
+CLANGFLAG='-Xclang -disable-O0-optnone -g -c -emit-llvm -I.'
 LLVMOPTFLAG='-mem2reg -mergereturn'
 
 TESTWITHOPT=$1
 COMPILELOG="compile.log"
 ### Add the fold of c files to be tested
-TestFolders="fi_tests"
+TestFolders="basic_c_tests"
 #      rc
 #            test\
 #	     "
